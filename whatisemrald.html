@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who/What is Emrald</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .card {
+            background-color: #116466;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 10px;
+            width: 30%;
+            box-sizing: border-box;
+            transition: transform 0.3s ease;
+            color: #D1E8E2;
+            position: relative;
+            text-align: left;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #116466;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover::after {
+            bottom: -20px;
+            border-top-color: #00FFFF;
+        }
+
+        .card h2 {
+            font-size: 24px;
+            color: #D1E8E2;
+            text-shadow: 0 0 10px #00FFFF;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #D1E8E2;
+            text-shadow: 0 0 10px #00FFFF;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">EMRALD DOMAIN</div>
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-text">
+            <h1>Welcome to Emrald</h1>
+            <h2>Who/What is Emrald?</h2>
+            <p>Discover the future of cybersecurity with Emrald, a cutting-edge platform integrating AI and blockchain technology.</p>
+        </div>
+        <div class="hero-image">
+            <img src="astra.png" alt="Astra">
+        </div>
+    </section>
+
+    <main id="about" class="discover-page">
+        <section class="discover-section">
+            <h1>Who/What is Emrald?</h1>
+            <div class="card-container">
+                <div class="card">
+                    <h2>Mission</h2>
+                    <p>Emrald's mission is to empower businesses with state-of-the-art security tools and services that not only defend against cyber threats but also ensure data integrity and compliance with industry standards. Leveraging AI and blockchain, Emrald sets a new standard in proactive cybersecurity.</p>
+                </div>
+                <div class="card">
+                    <h2>Key Features</h2>
+                    <p><strong>AI-Driven Threat Management:</strong> Utilizes advanced machine learning algorithms to detect and respond to threats in real-time. Continuously learns from new data to improve threat detection and reduce false positives.</p>
+                    <p><strong>Blockchain-Based Data Integrity:</strong> Ensures that data remains unaltered and secure by using blockchain technology. Provides an immutable record of data transactions, enhancing transparency and trust.</p>
+                    <p><strong>Automated Compliance Checks:</strong> Streamlines compliance with industry regulations by automating the verification process. Helps organizations stay ahead of regulatory changes and avoid costly penalties.</p>
+                    <p><strong>Comprehensive Security Services:</strong> Offers ethical hacking and vulnerability assessments to identify and mitigate potential risks. Includes encryption solutions for secure communication and data storage.</p>
+                </div>
+                <div class="card">
+                    <h2>Products and Solutions</h2>
+                    <p><strong>Emrald Secure Unified Security Platform (ESUSP):</strong> A sleek, modern device designed for physical security infrastructure. Provides real-time threat management, data integrity checks, and integration options through a user-friendly interface.</p>
+                    <p><strong>Hacker OS:</strong> A versatile cybersecurity platform offering tools like SecureCrypt, PassCrack, Web Crawl Scanner, and IP Pen Testing. Designed to be a last-resort defense against sophisticated cyber adversaries.</p>
+                    <p><strong>Project Uranium:</strong> Focuses on detecting zero-day vulnerabilities without directly offering solutions. Aims to provide the latest insights and updates on zero-day exploit detection.</p>
+                </div>
+                <div class="card">
+                    <h2>Vision</h2>
+                    <p>Emrald envisions a world where businesses can operate with confidence, knowing that their digital assets are protected by the most advanced and reliable cybersecurity technologies available. By combining AI, ML, and blockchain, Emrald seeks to create a secure digital ecosystem where innovation and growth can thrive without the constant threat of cyber attacks.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Emrald. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com/skyla643"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/skylamirandareyes-a99b781b4/"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

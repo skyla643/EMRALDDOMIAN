@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Preview - AI and Blockchain Monster</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional Styles for Product Preview */
+        .product-header {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #2C3531;
+            color: #D1E8E2;
+            text-shadow: 0 0 10px #00FFFF;
+            position: relative;
+        }
+
+        .product-header h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+        }
+
+        .product-header p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #D9B08C;
+        }
+
+        .coming-soon {
+            background-color: rgba(255, 0, 0, 0.8);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 1.5em;
+            font-weight: bold;
+            transform: rotate(-10deg);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .product-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            background-color: #2C3531;
+            color: #D1E8E2;
+        }
+
+        .product-content h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #00FFFF;
+            text-shadow: 0 0 10px #00FFFF;
+        }
+
+        .product-content p {
+            font-size: 1.2em;
+            max-width: 800px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .product-features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .feature {
+            background-color: #116466;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 10px;
+            width: 30%;
+            box-sizing: border-box;
+            transition: transform 0.3s ease;
+            color: #D1E8E2;
+            text-align: center;
+        }
+
+        .feature h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #00FFFF;
+            text-shadow: 0 0 10px #00FFFF;
+        }
+
+        .feature p {
+            font-size: 1em;
+            color: #D1E8E2;
+            text-shadow: 0 0 10px #00FFFF;
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-animation {
+            margin: 40px auto;
+            width: 200px;
+            height: 200px;
+            perspective: 800px;
+        }
+
+        .cube {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            animation: rotate-cube 10s infinite linear;
+        }
+
+        .cube .face {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba(0, 255, 255, 0.2);
+            border: 2px solid #00FFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #D1E8E2;
+            text-shadow: 0 0 5px #00FFFF;
+        }
+
+        .cube .face.front { transform: translateZ(100px); }
+        .cube .face.back { transform: rotateY(180deg) translateZ(100px); }
+        .cube .face.right { transform: rotateY(90deg) translateZ(100px); }
+        .cube .face.left { transform: rotateY(-90deg) translateZ(100px); }
+        .cube .face.top { transform: rotateX(90deg) translateZ(100px); }
+        .cube .face.bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+        .footer {
+            background-color: #2C3531;
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #333;
+            margin-top: auto; /* Push the footer to the bottom */
+        }
+
+        .footer p {
+            color: #D1E8E2;
+            margin: 0;
+            text-shadow: 0 0 10px #00FFFF;
+        }
+
+        .social-links {
+            margin-top: 20px;
+            z-index: 1;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            display: inline-block;
+            color: #D1E8E2;
+            font-size: 24px;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.1);
+            color: #00FFFF;
+        }
+
+        .social-links svg {
+            fill: #D1E8E2;
+            transition: fill 0.3s ease;
+        }
+
+        .social-links a:hover svg {
+            fill: #00FFFF;
+        }
+
+        /* Keyframes for cube rotation */
+        @keyframes rotate-cube {
+            from {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+            to {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">EMRALD DOMAIN</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="whatisemrald.html">Who/what's Emrald?</a>
+        </nav>
+    </header>
+
+    <section class="product-header">
+        <h1>Introduction to AI & Blockchain monster for Clients:</h1>
+        <p>Emrald Secure is an advanced data security platform designed to provide comprehensive protection through the integration of artificial intelligence (AI) and blockchain technology. It offers real-time predictive threat management, decentralized data integrity, automated compliance checks, anomaly detection, and seamless integration with existing systems. Emrald Secure is tailored for medium to large enterprises, as well as small businesses, ensuring robust data security, privacy, and regulatory compliance.</p>
+        <div class="coming-soon">Coming Soon</div>
+    </section>
+
+    <section class="product-content">
+        <h2>Key Features and How They Work</h2>
+        <div class="product-features">
+            <div class="feature">
+                <h3>Predictive Threat Management</h3>
+                <p>AI Algorithms: Emrald Secure employs sophisticated AI algorithms to continuously monitor and analyze network traffic, user behavior, and system activities.</p>
+                <p>Threat Prediction: By recognizing patterns and identifying anomalies, the platform predicts potential security threats before they materialize.</p>
+                <p>Proactive Measures: Once a potential threat is identified, Emrald Secure automatically initiates proactive security measures, such as isolating affected systems, alerting administrators, and suggesting remedial actions.</p>
+            </div>
+            <div class="feature">
+                <h3>Decentralized Data Integrity</h3>
+                <p>Blockchain Technology: Emrald Secure leverages blockchain to create an immutable and transparent ledger of all data transactions.</p>
+                <p>Data Privacy: Each transaction is encrypted and stored across a decentralized network, ensuring that data cannot be altered or tampered with.</p>
+                <p>Audit Trail: This decentralized ledger provides a clear and verifiable history of data access and modifications, enhancing trust and accountability.</p>
+            </div>
+            <div class="feature">
+                <h3>Automated Compliance Checks</h3>
+                <p>Regulatory Compliance: Emrald Secure is equipped with tools to automatically ensure that data handling practices comply with global standards and regulations such as GDPR, HIPAA, and CCPA.</p>
+                <p>Continuous Monitoring: The platform continuously monitors data processes and workflows, providing real-time compliance status and generating reports for audits.</p>
+                <p>Simplified Compliance: Businesses can easily maintain compliance without manual intervention, reducing the risk of non-compliance and associated penalties.</p>
+            </div>
+            <div class="feature">
+                <h3>Anomaly Detection with Machine Learning</h3>
+                <p>Machine Learning Models: Emrald Secure utilizes advanced machine learning models to learn and adapt to normal data access patterns and behaviors.</p>
+                <p>Anomaly Detection: The platform identifies deviations from these patterns, flagging potential security breaches or insider threats.</p>
+                <p>Real-Time Alerts: Administrators receive real-time alerts for any suspicious activities, enabling swift investigation and response.</p>
+            </div>
+            <div class="feature">
+                <h3>Integration Capabilities</h3>
+                <p>API and Plugins: Emrald Secure offers a robust set of APIs and plugins that facilitate seamless integration with existing business systems and software.</p>
+                <p>Custom Integrations: The platform is designed to work with a wide range of applications, from enterprise resource planning (ERP) systems to customer relationship management (CRM) tools, ensuring minimal disruption during deployment.</p>
+                <p>Scalability: Emrald Secure can scale to accommodate the growing needs of businesses, from small startups to large enterprises.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="product-animation">
+        <div class="cube">
+            <div class="face front">Security</div>
+            <div class="face back">AI</div>
+            <div class="face right">Blockchain</div>
+            <div class="face left">Learning</div>
+            <div class="face top">Threats</div>
+            <div class="face bottom">Compliance</div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Emrald. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com/skyla643" target="_blank">
+                <svg height="24" width="24" viewBox="0 0 16 16" version="1.1" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.54 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.45 1.1.17 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/skylamirandareyes-a99b781b4/" target="_blank">
+                <svg height="24" width="24" viewBox="0 0 24 24" version="1.1" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M20.447 20.452h-3.554v-5.569c0-1.328-.025-3.036-1.85-3.036-1.851 0-2.134 1.445-2.134 2.939v5.666h-3.554V9h3.414v1.561h.048c.476-.898 1.637-1.848 3.372-1.848 3.606 0 4.272 2.371 4.272 5.451v6.288zm-16.839-11.52c-1.148 0-2.079-.933-2.079-2.084 0-1.151.931-2.084 2.079-2.084 1.148 0 2.079.933 2.079 2.084-.001 1.151-.932 2.084-2.079 2.084zm1.784 11.52H2.83V9h3.563v11.452zM22.23 0H1.77C.792 0 0 .774 0 1.727v20.545C0 23.225.792 24 1.77 24h20.459C23.207 24 24 23.225 24 22.273V1.727C24 .774 23.207 0 22.23 0z"></path>
+                </svg>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
